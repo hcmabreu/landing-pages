@@ -39,6 +39,26 @@ MIT (`LICENSE.higgsfield-ai`).
 Origem: [robonuggets/higgsfield-skill](https://github.com/robonuggets/higgsfield-skill).
 CC BY 4.0 — © 2026 RoboLabs (`higgsfield/LICENSE`).
 
+### Design e frontend (via `npx skills add`)
+
+Instaladas pelo CLI `skills`, que grava as skills em `.agents/skills/` (layout
+multi-agente) e cria symlinks em `.claude/skills/`. O `skills-lock.json` na raiz
+registra origem e hash de cada uma.
+
+| Skill | O que faz | Origem | Licença |
+| --- | --- | --- | --- |
+| `frontend-design` | Direção estética, tipografia e escolhas visuais que não parecem template padrão. | `anthropics/skills` | Apache 2.0 |
+| `high-end-visual-design` | Fontes, espaçamento, sombras, cards e animações que fazem um site parecer caro; bloqueia os defaults que denunciam design gerado por IA. | `leonxlnx/taste-skill` | MIT |
+| `vercel-react-best-practices` | Performance em React/Next.js pela engenharia da Vercel — 76 regras sobre re-render, bundle, async e server. | `vercel-labs/agent-skills` | sem licença declarada |
+| `web-design-guidelines` | Auditoria de UI contra as Web Interface Guidelines (acessibilidade, UX). | `vercel-labs/agent-skills` | sem licença declarada |
+
+## Dois layouts de skill neste repo
+
+As skills do Higgsfield e a `scroll-world` são pastas normais em `.claude/skills/`.
+As quatro de design ficam em `.agents/skills/` com symlink a partir de `.claude/skills/`,
+porque foi assim que o CLI `skills` as instalou. Ambos funcionam; a diferença importa
+só se você for mover ou versionar as pastas à mão.
+
 ## Duas interfaces para o Higgsfield
 
 A suíte `higgsfield-*` oficial e o `scroll-world` são escritos para a **CLI** (`higgsfield …`).
